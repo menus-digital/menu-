@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#06485b">
+    <title>Légende de Goût - Menu Digital</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="intro-active">
+    <div class="intro" id="intro" aria-label="Légende de Goût">
+      <div class="intro__shade"></div>
+      <div class="intro__content">
+        <p class="intro__mark">Lg</p>
+        <h1><span>Menu</span> Légende de Goût</h1>
+        <p>Traiteur</p>
+        <button class="intro__button" type="button" id="enterMenu">Découvrir le menu</button>
+      </div>
+      <div class="intro__wipe" aria-hidden="true"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <nav class="topbar" aria-label="Navigation principale">
+        <a class="brand" href="#top" data-scroll-top aria-label="Légende de Goût">
+          <span class="brand__mark">Lg</span>
+          <span>
+            <strong>Légende de Goût</strong>
+            <small>Traiteur</small>
+          </span>
+        </a>
+        <div class="topbar__actions">
+          <label class="search">
+            <span aria-hidden="true"></span>
+            <input id="menuSearch" type="search" placeholder="Chercher un plat..." autocomplete="off">
+          </label>
+        </div>
+      </nav>
+      <div class="category-nav" id="categoryNav" aria-label="Catégories du menu"></div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="script-logo">Lg</p>
+          <h2 id="hero-title"><span>Menu</span> Légende de Goût</h2>
+          <p class="hero__subtitle">Petit-déjeuner, plats, pizzas, boissons et desserts.</p>
+          <div class="hero__highlights" aria-label="Offres">
+            <a href="#plat-jour">Plat de jour <strong>60Dh</strong></a>
+            <a href="#couscous">Couscous vendredi</a>
+            <a href="#kids">Kids menu <strong>40Dh</strong></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band section-band--photos" id="photos">
+        <div class="section-heading">
+          <span class="eyebrow">Galerie</span>
+          <h2>Photos</h2>
+        </div>
+        <div class="photo-grid" id="photoGrid"></div>
+      </section>
+
+      <section class="section-band section-band--breakfast" id="breakfast">
+        <div class="section-heading">
+          <span class="eyebrow">Matin</span>
+          <h2>Petit-déjeuner</h2>
+        </div>
+        <div class="menu-grid" id="breakfastGrid"></div>
+      </section>
+
+      <section class="section-band" id="food">
+        <div class="section-heading">
+          <span class="eyebrow">Cuisine</span>
+          <h2>Nos spécialités</h2>
+        </div>
+        <div class="menu-grid" id="foodGrid"></div>
+      </section>
+
+      <section class="section-band section-band--drinks" id="drinks">
+        <div class="section-heading">
+          <span class="eyebrow">Boissons</span>
+          <h2>Chaud, froid et jus</h2>
+        </div>
+        <div class="menu-grid" id="drinksGrid"></div>
+      </section>
+
+      <section class="section-band" id="sweet">
+        <div class="section-heading">
+          <span class="eyebrow">Sucré</span>
+          <h2>Desserts et pâtisserie</h2>
+        </div>
+        <div class="menu-grid" id="sweetGrid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>Légende de Goût</strong>
+        <span>legendedegout@gmail.com</span>
+      </div>
+      <a href="#top" data-scroll-top>Retour en haut</a>
+    </footer>
+
+    <template id="sectionTemplate">
+      <article class="menu-section">
+        <header class="brush-title">
+          <span class="menu-section__icon" aria-hidden="true"></span>
+          <h3></h3>
+        </header>
+        <div class="menu-items"></div>
+      </article>
+    </template>
+
+    <template id="itemTemplate">
+      <div class="menu-item">
+        <div class="menu-item__main">
+          <div>
+            <h4></h4>
+            <p></p>
+          </div>
+          <strong class="price"></strong>
+        </div>
+        <span class="badge"></span>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
