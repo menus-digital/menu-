@@ -1,7 +1,11 @@
 (() => {
   "use strict";
 
- 
+  /* ---------------------------------------------------------------
+     INTRO SEQUENCE
+     Auto-advances after a short beat, or on tap. Skips instantly on
+     repeat visits within the same session (nice for staff/regulars).
+  --------------------------------------------------------------- */
   const intro = document.getElementById("intro");
   const introEnter = document.getElementById("introEnter");
   const app = document.getElementById("app");
